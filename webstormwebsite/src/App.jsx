@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Intro from "./components/Intro";
 import AboutMe from "./components/AboutMe";
-import Tools from "./components/Tools";
+
 import Projects from "./components/Projects";
-import Nav from "./components/Nav"; // Import the Nav component
+
 import "./index.css"; // Tailwind CSS styles
 import "aos/dist/aos.css";
 import Contact from "./components/Contact";
 
 const App = () => {
+    // eslint-disable-next-line
     const [projectsHeight, setProjectsHeight] = useState(0);
 
     return (
