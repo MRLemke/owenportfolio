@@ -8,8 +8,8 @@ const Intro = () => {
         "Software Engineer",
         "Backend Developer",
         "Frontend Developer",
-        "Jazz Enthusiast",
-        "Trumpeter",
+
+
     ];
 
     useEffect(() => {
