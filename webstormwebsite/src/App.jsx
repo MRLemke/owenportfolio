@@ -16,6 +16,7 @@ import "aos/dist/aos.css";
 
 
 const App = () => {
+    // eslint-disable-next-line
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {

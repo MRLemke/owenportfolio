@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
     const [darkMode, setDarkMode] = useState(false);
-    const [animating, setAnimating] = useState(false);
+    //const [animating, setAnimating] = useState(false);
     // Sync theme with <html class="dark">
     useEffect(() => {
         if (darkMode) {
