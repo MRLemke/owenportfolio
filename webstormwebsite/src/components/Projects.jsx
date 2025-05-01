@@ -1,60 +1,53 @@
-import React, { useMemo } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+
+const projects = [
+    {
+        name: "Artist Portfolio Website",
+        slug: "artist-site",
+        image: "/artp1.png",
+        route: "/artist-site",
+        description: "A store page for Linda Donohue, an abstract artist who needed a virtual space to sell her work",
+    },
+    {
+        name: "WoWTeamz",
+        slug: "wowteamz",
+        image: "/wowteamsscreenshot.png",
+        route: "/WoWTeamz",
+        description: "A web app to manage World of Warcraft raid teams using Blizzard’s API.",
+    },
+
+];
 
 const Projects = () => {
-    const projects = useMemo(
-        () => [
-            {
-                title: "WoW Teams",
-                description:
-                    "An application designed to allow users to search World of Warcraft characters and add them to their team, and assign roles and notes to them. This app had an AWS SQL server to store account, character, and team data.",
-                link: "https://github.com/conboyr/WowTeamz",
-                image: "wowteamsscreenshot.png",
-            },
-            {
-                title: "Eclipse Detection",
-                description:
-                    "Using the bag of visual words algorithm, and later on, a convolutional neural network, my team and I worked to identify and classify 80 gigabytes of images of a recent solar eclipse.",
-                link: "https://github.com/matthew0316/Solar-Eclipse",
-                image: "cnn.png",
-            },
-            {
-                title: "C-style Interpreter",
-                description:
-                    "My team and I designed an interpreter for a C-style language, allowing execution of basic C-style code.",
-                link: "https://replit.com/@antennabutt/cs460project#abstractsyntaxtree.cpp",
-                image: "interpret.png",
-            },
-        ],
-        []
-    );
-
     return (
-        <div id="projects" className="min-h-screen bg-gray-900 text-white flex flex-col items-center py-12 px-4">
-            <h2 className="text-2xl font-bold mb-8">Projects</h2>
-            <div className="flex flex-col gap-8 max-w-3xl w-full">
+        <section className="px-6 py-16 bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white transition-colors duration-300">
+            <h1 className="section-header">Projects</h1>
+
+            <div className="flex flex-col gap-16 max-w-4xl mx-auto">
                 {projects.map((project, index) => (
-                    <div key={index} className="flex flex-col items-center w-full">
+                    <div key={index} className="flex flex-col items-center text-center">
                         <img
                             src={project.image}
-                            alt={project.title}
-                            className="w-full max-w-lg h-64 object-cover rounded-lg"
+                            alt={project.name}
+                            className="rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.15)] border border-neutral-200 dark:border-neutral-700 mb-6 w-full max-w-xl transition-transform duration-300 hover:scale-[1.02]"
                         />
-                        <div className="mt-4 text-center">
-                            <a
-                                href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-xl font-bold text-blue-400 hover:text-blue-500 transition-colors"
-                            >
-                                {project.title}
-                            </a>
-                            <p className="text-md mt-2">{project.description}</p>
-                        </div>
+
+                        <Link
+                            to={project.route}
+                            className="inline-block px-5 py-2 rounded-xl mb-4 text-sm font-medium border border-neutral-300 dark:border-neutral-700 text-neutral-800 dark:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-all duration-200"
+                        >
+                            View {project.name}
+                        </Link>
+
+                        <p className="body-text max-w-lg">{project.description}</p>
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 
 export default Projects;
+
+
