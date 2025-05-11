@@ -52,6 +52,23 @@ const AboutMe = () => {
           </span>
                 </p>
             </div>
+            {/* Certification */}
+            <Section title="Certifications">
+                <u1 className="list-disc list-inside">
+                    <li>
+                        <a
+                            href="/CompTIA%20A+%20ce%20certificate.pdf"
+                            target="_blank"
+                            rel="noopener"
+                            className="text-blue-600 dark:text-blue-400 hover:underline"
+                            >
+                        CompTIA A+ (2025)
+                        </a>
+
+
+                    </li>
+                </u1>
+                </Section>
 
             {/* Social Links */}
             <div className="flex justify-center space-x-6 text-2xl mt-12">
