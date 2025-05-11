@@ -14,7 +14,6 @@ import "./index.css"; // Tailwind CSS styles
 import Contact from "./components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ArtByMaryam from "./components/ArtbyMaryam";
 
 
 const App = () => {
