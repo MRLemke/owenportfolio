@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 app.post("/contact", async (req, res) => {
     const { name, email, message } = req.body;
 
-    if (!email || !message) {
+    if (!name || !email || !message) {
         return res.status(400).json({ error: "Missing required fields" });
     }
 
@@ -35,7 +35,7 @@ app.post("/contact", async (req, res) => {
             from: `"${name}" <${email}>`,
             to: process.env.EMAIL_USER,
             subject: "New Contact Form Submission",
-            text: message,
+            text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
         });
 
         res.status(200).json({ message: "Message sent successfully!" });
