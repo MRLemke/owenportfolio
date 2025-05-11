@@ -3,11 +3,18 @@ import { Link } from "react-router-dom";
 
 const projects = [
     {
-        name: "Artist Portfolio Website",
+        name: "lpdart",
         slug: "artist-site",
         image: "/artp1.png",
         route: "/artist-site",
-        description: "A store page for Linda Donohue, an abstract artist who needed a virtual space to sell her work",
+        description: "A store website for Linda Donohue, an abstract artist who needed a virtual space to sell her work",
+    },
+    {
+        name: "Art by Maryam",
+        slug: "ArtbyMaryam",
+        image: "/maryam1.png",
+        route: "/ArtbyMaryam",
+        description: "A store website for Maryam, an artist who needed categorization and UX help.",
     },
     {
         name: "WoWTeamz",
@@ -16,6 +23,7 @@ const projects = [
         route: "/WoWTeamz",
         description: "A web app to manage World of Warcraft raid teams using Blizzard’s API.",
     },
+
 
 ];
 

@@ -4,6 +4,7 @@ import Intro from "./components/Intro";
 import AboutMe from "./components/AboutMe";
 import ArtistSite from "./components/ArtistSite";
 import WoWTeamz from "./components/WoWTeamz";
+import ArtbyMaryam from "./components/ArtbyMaryam";
 // Inside <Routes>
 
 import Projects from "./components/Projects";
@@ -13,6 +14,7 @@ import "./index.css"; // Tailwind CSS styles
 import Contact from "./components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ArtByMaryam from "./components/ArtbyMaryam";
 
 
 const App = () => {
@@ -47,6 +49,7 @@ const App = () => {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/artist-site" element={<ArtistSite />} />
                     <Route path="/WoWTeamz" element={<WoWTeamz />} />
+                    <Route path="/ArtByMaryam" element={<ArtbyMaryam />} />
                 </Routes>
             </>
         </Router>
